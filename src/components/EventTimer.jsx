@@ -1,3 +1,4 @@
+import { createCountdown } from "../lib/time";
 import styles from "./EventTimer.module.css";
 
 export default function EventTimer(props) {
@@ -9,26 +10,22 @@ export default function EventTimer(props) {
     const countdown = () => {
         let distance = isActive() ? activeTimeRemaining() : nextIn();
 
-        return {
-            h: ("0" + Math.floor(distance / 3600)).slice(-2),
-            m: ("0" + Math.floor((distance % 3600) / 60)).slice(-2),
-            s: ("0" + Math.floor((distance % 3600) % 60)).slice(-2),
-        };
+        return createCountdown(distance);
     };
 
     return (
-        <div class={styles.EventTimer} classList={{ [styles.active]: isActive() }}>
-            <h1 class="headline">{props.config.title}</h1>
+        <div class={styles.EventTimer} classList={{ [styles.active]: isActive(), box: true }}>
+            <h1 class="box-title">{props.config.title}</h1>
             <div class="timer">
                 <ul>
                     <li>
-                        <span class="hours">{countdown().h}</span>H
+                        <span class="hours">{countdown().hours}</span>H
                     </li>
                     <li>
-                        <span class="minutes">{countdown().m}</span>M
+                        <span class="minutes">{countdown().minutes}</span>M
                     </li>
                     <li>
-                        <span class="seconds">{countdown().s}</span>S
+                        <span class="seconds">{countdown().seconds}</span>S
                     </li>
                 </ul>
             </div>
