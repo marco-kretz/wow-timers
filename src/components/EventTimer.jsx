@@ -2,14 +2,13 @@ import { createCountdown } from "../lib/time";
 import styles from "./EventTimer.module.css";
 
 export default function EventTimer(props) {
-    const firstStarted = () => props.config.start[props.region()];
-    const nextIn = () => props.config.interval - ((props.currentTime() - firstStarted()) % props.config.interval);
+    const firstStarted = () => new Date(props.config.start[props.region()] * 1000);
+    const nextIn = () => props.config.interval - (((props.currentTime() - firstStarted()) / 1000) % props.config.interval);
     const isActive = () => props.config.interval - nextIn() < props.config.duration;
     const activeTimeRemaining = () => props.config.duration - (props.config.interval - nextIn());
 
     const countdown = () => {
         let distance = isActive() ? activeTimeRemaining() : nextIn();
-
         return createCountdown(distance);
     };
 

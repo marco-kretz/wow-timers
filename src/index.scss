@@ -16,6 +16,10 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &.small {
+    justify-content: flex-start;
+  }
 }
 
 .box {
@@ -68,5 +72,28 @@ code {
     span {
       font-size: 2.5rem;
     }
+  }
+}
+
+@media only screen and (max-width: 864px) {
+  body {
+    justify-content: start;
+    padding-top: 10px;
+  }
+
+  box {
+    padding: 15px;
+  }
+
+  li {
+    padding: .5em;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .row.small {
+    justify-content: center;
   }
 }
