@@ -1,0 +1,20 @@
+{
+    "en": {
+        "switch_region_to": "Switch region to",
+        "community_feast": "Community Feast",
+        "dragonbane_keep": "Dragonbane Keep",
+        "grand_hunt": "Grand Hunt",
+        "primal_storm": "Primal Storm",
+        "weekly_reset": "Weekly Reset",
+        "daily_reset": "Daily Reset"
+    },
+    "de": {
+        "switch_region_to": "Region ändern zu",
+        "community_feast": "Gemeinsch. Festmahl",
+        "dragonbane_keep": "Drachenfluchfestung",
+        "grand_hunt": "Große Jagd",
+        "primal_storm": "Elementarstürme",
+        "weekly_reset": "Wöchentlicher Reset",
+        "daily_reset": "Täglicher Reset"
+    }
+}

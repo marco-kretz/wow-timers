@@ -12,6 +12,25 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -25,12 +44,13 @@ code {
 .box {
   background: rgba(0, 0, 0, .7);
   backdrop-filter: blur(2px);
-  padding: 30px;
+  padding: 0px 30px 30px 30px;
   margin: 5px;
   border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
   &.small {
-    padding: 15px;
+    padding: 0 15px;
   }
 }
 
@@ -40,10 +60,11 @@ code {
   background: rgba(0, 0, 0, .4);
   text-transform: uppercase;
   color: #ddd;
-  display: inline;
-  border-radius: 5px;
-  letter-spacing: .125rem;
-  padding: 5px 7px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  letter-spacing: .105rem;
+  padding: 7px 15px 7px 15px;
+  margin: 0;
 }
 
 .timer {
@@ -81,12 +102,37 @@ code {
     padding-top: 10px;
   }
 
-  box {
-    padding: 15px;
+  .box {
+    padding: 0px 10px 0px 10px;
+    width: 100%;
   }
 
-  li {
-    padding: .5em;
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .timer {
+    ul {
+      li {
+        padding: .5em;
+
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    &.small {
+      ul {
+        li {
+          padding: .5em;
+
+          span {
+            font-size: 1.75rem;
+          }
+        }
+      }
+    }
   }
 
   .spacer {

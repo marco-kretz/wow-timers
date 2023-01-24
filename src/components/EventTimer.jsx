@@ -1,9 +1,10 @@
+import { useI18n } from "@solid-primitives/i18n";
 import { createCountdown } from "../lib/time";
 import styles from "./EventTimer.module.css";
 
 export default function EventTimer(props) {
-    const firstStarted = () => new Date(props.config.start[props.region()] * 1000);
-    const nextIn = () => props.config.interval - (((props.currentTime() - firstStarted()) / 1000) % props.config.interval);
+    const firstStarted = () => props.config.start[props.region()];
+    const nextIn = () => props.config.interval - ((props.currentTime() - firstStarted()) % props.config.interval);
     const isActive = () => props.config.interval - nextIn() < props.config.duration;
     const activeTimeRemaining = () => props.config.duration - (props.config.interval - nextIn());
 
@@ -12,9 +13,11 @@ export default function EventTimer(props) {
         return createCountdown(distance);
     };
 
+    const [t] = useI18n();
+
     return (
         <div class={styles.EventTimer} classList={{ [styles.active]: isActive(), box: true }}>
-            <h1 class="box-title">{props.config.title}</h1>
+            <h1 class="box-title">{t(props.config.title)}</h1>
             <div class="timer">
                 <ul>
                     <li>

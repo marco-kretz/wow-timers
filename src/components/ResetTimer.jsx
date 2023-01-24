@@ -2,7 +2,7 @@ import { createCountdown } from "../lib/time";
 
 export default function ResetTimer(props) {
     const countdown = () => {
-        let distance = props.nextReset - props.currentTime() / 1000;
+        let distance = props.nextReset - props.currentTime();
 
         return createCountdown(distance);
     };

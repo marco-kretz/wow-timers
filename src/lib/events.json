@@ -1,0 +1,38 @@
+{
+    "community_feast": {
+        "title": "community_feast",
+        "interval": 12600,
+        "duration": 900,
+        "start": {
+            "eu": 1670333460,
+            "na": 1670335260
+        }
+    },
+    "dragonbane_keep": {
+        "title": "dragonbane_keep",
+        "interval": 7200,
+        "duration": 600,
+        "start": {
+            "eu": 1670342460,
+            "na": 1670338860
+        }
+    },
+    "grand_hunt": {
+        "title": "grand_hunt",
+        "interval": 7200,
+        "duration": 7199,
+        "start": {
+            "eu": 1671307200,
+            "na": 1671303600
+        }
+    },
+    "primal_storm": {
+        "title": "primal_storm",
+        "interval": 10800,
+        "duration": 7200,
+        "start": {
+            "eu": 1671303600,
+            "na": 1671310800
+        }
+    }
+}
