@@ -4,7 +4,7 @@ import { createRoot, createSignal } from "solid-js";
 function createTimer() {
     const [time, setTime] = createSignal(Math.floor(new Date().getTime() / 1000));
     setInterval(() => {
-        setTime((value) => value + 1);
+        setTime(Math.floor(new Date().getTime() / 1000));
     }, 1000);
 
     return { time };
