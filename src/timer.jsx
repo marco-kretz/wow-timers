@@ -5,7 +5,6 @@ function createTimer() {
     const [time, setTime] = createSignal(Math.floor(new Date().getTime() / 1000));
     setInterval(() => {
         setTime(Math.floor(new Date().getTime() / 1000));
-        console.log(time());
     }, 1000);
 
     return { time };
