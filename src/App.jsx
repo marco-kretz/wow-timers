@@ -1,6 +1,8 @@
 import { createI18nContext, I18nContext } from "@solid-primitives/i18n";
 import { createEffect, createSignal } from "solid-js";
 import styles from "./App.module.scss";
+import bellOff from "./assets/bell-off.svg";
+import bellOn from "./assets/bell-on.svg";
 import EventTimer from "./components/EventTimer";
 import WorldEvents from "./lib/events";
 import translations from "./lib/translations.json";
@@ -27,7 +29,7 @@ function App() {
                     </button>
                     <img
                         class={styles["btn-notify"]}
-                        src={"/src/assets/bell-" + (notify() === "on" ? "on" : "off") + ".svg"}
+                        src={notify() === "on" ? bellOn : bellOff}
                         onClick={() => setNotify(notify() === "on" ? "off" : "on")}
                         height="25"
                     />
