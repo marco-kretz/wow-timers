@@ -1,8 +1,10 @@
 import { createCountdown } from "../lib/time";
+import timer from "../timer";
 
 export default function ResetTimer(props) {
+    const { time } = timer;
     const countdown = () => {
-        let distance = props.nextReset - props.currentTime();
+        let distance = props.nextReset - time();
 
         return createCountdown(distance);
     };

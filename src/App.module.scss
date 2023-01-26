@@ -22,6 +22,8 @@
 header {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, .7);
   text-transform: uppercase;
   color: #aaa;
@@ -44,5 +46,11 @@ header {
       background: #716b79;
       text-decoration: underline;
     }
+  }
+
+  .btn-notify {
+    height: 19px;
+    margin: 0 13px;
+    cursor: pointer;
   }
 }
