@@ -1,11 +1,11 @@
 {
     "community_feast": {
         "title": "community_feast",
-        "interval": 12600,
+        "interval": 5400,
         "duration": 900,
         "start": {
-            "eu": 1670333460,
-            "na": 1670335260
+            "eu": 1706544000,
+            "na": 1706540400
         }
     },
     "dragonbane_keep": {
